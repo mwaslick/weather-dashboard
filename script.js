@@ -161,6 +161,9 @@ function getWeather() {
 // If the city does not already exist in the array of search history, it is pushed into the search history array
 if (searches.indexOf(cityInput) === -1) {
         searches.push(cityInput);
+        localStorage.setItem('searchHistory', JSON.stringify(searches))
+    
+    };
         var newsearchLi= $("<li>");
         newsearchLi.attr("class", "list-group-item list-group-item-action")
         newsearchLi.text(cityInput)
