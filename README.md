@@ -9,6 +9,8 @@ Below the city's current weather, a 5-day weather forecast will also be displaye
 
 When a city is entered into the search bar, it will be stored in the list labeled "Search History" that is located directly under the search bar. If a user clicks on one of the items in the search history, it will reload data for that city and display it on the page. This webpage uses JavaScript, jQuery, and AJAX calls to the Open Weather API in order to get its information.
 
+You can visit the weather dashboard at https://mwaslick.github.io/weather-dashboard/ !
+
 ## Screenshots
 
 The dashboard before a city is entered
