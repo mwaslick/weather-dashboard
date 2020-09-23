@@ -1,0 +1,81 @@
+.jumbotron-fluid {
+    height: 100px;
+    text-align: center;
+    background-image: url("./images/cloudheader.png"); 
+    background-size: cover;
+    color: #421A87; 
+}
+
+body {
+    background-color: #F1ECFF;
+}
+
+h1 {
+    margin-top: -40px;
+    font-family: 'Itim', cursive;
+    font-size: 70px;
+}
+
+h2 {
+    color: #862168;
+    margin-left: 5px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.card-header {
+    font-family: 'Itim', cursive;
+    font-size: 25px;
+    background-color: #FFC6E1;
+    color:	#5F3E7C;
+
+}
+
+#search-div {
+    margin-bottom: 20px;
+}
+
+li {
+    font-family: 'NTR', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.card-body {
+    font-family: 'NTR', sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+.low {
+    background-color: limegreen;
+}
+
+.moderate {
+    background-color: yellow;
+}
+
+.high {
+    background-color: orange;
+}
+
+.very-high {
+    background-color: red;
+}
+
+.extreme {
+    background-color: deeppink;
+}
+
+#weatherInfo {
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.forecast {
+    margin-left: 20px;
+}

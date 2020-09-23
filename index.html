@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=NTR&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" href= "style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+
+<!-- // Header containing website title  -->
+<header class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Weather Dashboard</h1>
+      </div>
+</header>
+
+<!-- Div with form where you can search for a city -->
+<div class= "row">
+    <div class= "col-md-4">
+        <div class="card" id= "search-div">
+        <h5 class="card-header">
+            Search for a City
+        </h5>
+    <div class="card-body">
+        <form class="form-inline">
+            <div class="form-group mx-sm-4 mb-2">
+              <label for="weatherForm"></label>
+              <input type="text" class="form-control" id="city-input" placeholder="Enter city">
+            </div>
+            <button class="btn btn-primary mb-2" id="submitBtn">Submit</button>
+        </form>
+    </div>
+    </div>
+
+<!-- Div displaying search history in a list -->
+    <div class="card">
+        <h5 class="card-header">Search History</h5>
+        <!-- List will be loaded and displayed when the page is refreshed -->
+        <ul class="list-group" id= "search-history">
+      </ul>
+    </div>
+</div>
+
+<!-- Div where the weather info will be stored -->
+<div class= "col-md-8">
+    <div class="card">
+        <h5 class="card-header">Weather Data</h5>
+        <div class="card-body">
+        <div class= "row">
+            <!-- Where the city name and date will be displayed -->
+            <h2 id= "weatherTitle"></h2>
+        </div>
+
+        <!-- Where the weather icon, temperature, humidity, wind, and UV index data will be displayed -->
+        <div class= "row">
+            <div id = "weatherInfo">
+                </div>
+            </div>   
+        
+        <!-- Where the 5-day forecast header will be displayed -->
+        <div class= "row">
+            <h2 id= "forecastHeader"></h2>
+        </div>
+<!--         
+        Where the 5 day forecast data will be displayed -->
+        <div class= "row" id= "forecastRow">
+        </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
