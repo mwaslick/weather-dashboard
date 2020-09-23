@@ -33,7 +33,7 @@ $("#search-history li").on("click", function(event) {
 function getWeather() {
     var cityInput = $("#city-input").val().trim()
     console.log(cityInput)
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=" + APIkey 
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=" + APIkey 
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -43,7 +43,7 @@ function getWeather() {
         cityHeader.text(response.name.trim() + " (" + currentDate + ")")
 
         var cityImg = $("<img>")
-        var imgUrl = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png"
+        var imgUrl = "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png"
         cityImg.attr("src", imgUrl)
         cityImg.attr("alt", response.weather[0].description)
 
@@ -65,7 +65,7 @@ function getWeather() {
         var cityLat = response.coord.lat;
         var cityLong = response.coord.lon;
         
-        var coordUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLong + "&appid=" + APIkey
+        var coordUrl = "https://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLong + "&appid=" + APIkey
 
         $.ajax({
             url: coordUrl,
@@ -93,7 +93,7 @@ function getWeather() {
         })
 
        // Gets the data for the 5 day weather forecast from the API
-        var forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&appid=" + APIkey
+        var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&appid=" + APIkey
 
         $.ajax({
             url: forecastUrl,
@@ -114,7 +114,7 @@ function getWeather() {
                 forecastHeader.text(moment.unix(response.list[j].dt).format("l"))
 
                 var forecastImg = $("<img>")
-                var fimgUrl = "http://openweathermap.org/img/wn/" + response.list[j].weather[0].icon + "@2x.png"
+                var fimgUrl = "https://openweathermap.org/img/wn/" + response.list[j].weather[0].icon + "@2x.png"
                 forecastImg.attr("src", fimgUrl)
                 forecastImg.attr("alt", response.list[j].weather[0].description)
 
