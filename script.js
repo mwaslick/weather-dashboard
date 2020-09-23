@@ -161,7 +161,6 @@ function getWeather() {
 // If the city does not already exist in the array of search history, it is pushed into the search history array
 if (searches.indexOf(cityInput) === -1) {
         searches.push(cityInput);
-        location.reload();
     }
 
 // Stringifies the search history
